@@ -44,7 +44,6 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 */
 
 $router->get('/', 'User::login');
-$router->get('/register', 'User::register');
 $router->post('/signup', 'User::sign_up');
 $router->get('/confirmation', 'User::confirm');
 $router->get('/resend', 'User::resend');

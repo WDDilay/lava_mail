@@ -6,42 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="public/Assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/style/style.css">
     <script src="public/Assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        .form-container {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="container form-container">
-        <div class="row ">
-        <?php flash_alert();?>
-            <div class="col-md-12 border-1 border-black">
-                <form action="<?= site_url('/verify')?>" method="POST" class="w-100">
-                    <div class="form-group ">
-                        <label for="email">Email: </label>
-                        <input class="form-control" type="email" name="email" required><br>
-                        <label for="password">Password: </label>
-                        <input class="form-control" type="password" name="password" required><br>
-                        <button class="form-control btn btn-primary" type="submit">Login</button><br>
-                        <a href="/register" class="text-center d-block">Register</a>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-    </div>
-
     
+    <div class="container">
+    <?php flash_alert();?>
+    <input type="checkbox" id="check">
+    
+    <!-- Login Form -->
+    <div class="login form">
+      <header>Login</header>
+      <form action="<?= site_url('/verify')?>" method="POST" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <input type="submit" class="button"d value="Login">
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+         <label for="check">Signup</label>
+        </span>
+      </div>
+    </div>
+    
+    <!-- Registration Form -->
+    <div class="registration form">
+      <header>Signup</header>
+      <form action="/signup" method="POST">
+        <input type="text" name="first_name" placeholder="Enter your First Name" required>
+        <input type="text" name="last_name" placeholder="Enter your First Name" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Create a password" required>
+        <input type="password" name="con_password" placeholder="Confirm password" required>
+        <input type="submit" class="button" value="Signup">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

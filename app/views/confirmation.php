@@ -7,41 +7,26 @@
     <title>Confirm</title>
     <link rel="stylesheet" href="public\Assets\node_modules\bootstrap\dist\css\bootstrap.min.css">
     <script src="public/Assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-        }
-
-        .form-container {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="/public/style/style.css">
 </head>
 
 <body>
-    <div class="container form-container">
-        <div class="row ">
-            <form action="<?= site_url('/activate')?>" method="POST">
-            <?php flash_alert(); ?>
-                <div class="form-group ">
-             
-                    <div class="from-row">
-                            <label for="code">Code </label>
-                            <input class="form-control" type="text" name="code" placeholder="Enter Code" required>
-                <button class="form-control btn btn-primary my-2" type="submit">Confirm</button><br>
+    
+<div class="container">
+    <?php flash_alert();?>
+     <!-- Login Form -->
+    <div class="login form">
+      <header>Confirmation</header>
+      <form action="<?= site_url('/activate')?>" method="POST">
+      <?php flash_alert(); ?>
+        <input type="text" name="code" placeholder="Enter code" required>
+        <input type="submit" class="button" value="Confirm">
+        <a href="/resend" class="button">Resend Confirmation</a><br>
+        <a href="/" class="button">Go to Login</a>
+      </form>
+    </div>
+</div>
 
-            </form>
-            <button class="btn btn-primary px-5"><a href="/resend" class="text-light text-decoration-none">Resend Confirmation</a></button><br>
-            <a href="/" class="text-center d-block">Go to login</a>
-        </div>
-    </div>
-    </div>
 </body>
 
 </html>

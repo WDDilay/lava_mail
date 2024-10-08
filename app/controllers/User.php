@@ -12,10 +12,6 @@ class User extends Controller
     {
         $this->call->view('login');
     }
-    public function register()
-    {
-        $this->call->view('register');
-    }
     public function sign_up()
     {
         if ($this->form_validation->submitted()) {
@@ -34,7 +30,7 @@ class User extends Controller
                 $this->send($email);
                 redirect('/confirmation');
             } else {
-                redirect('/register');
+                redirect('/login');
             }
         }
     }
