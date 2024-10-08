@@ -73,7 +73,6 @@ class User extends Controller
     }
     public function confirm()
     {
-
         $this->call->view('confirmation');
     }
 
@@ -106,7 +105,7 @@ class User extends Controller
         $code = $this->random_number();
         $this->session->set_userdata('code', $code);;
         $con =  $this->session->userdata('code');
-        $this->send_mail($email,'<p>Your confirmation code: <strong>' . $con . '</strong> click this link to redirect to confirmation page <strong> http://localhost:8000/confirmation </strong> </p>', 'D:\Downloads\sddefault.jpg');
+        $this->send_mail($email,'<p>Your confirmation code: <strong>' . $con . '</strong> click this link to redirect to confirmation page <strong> http://localhost:8080/confirmation </strong> </p>', '"C:\Users\Warren\Downloads\461571538_1233262567989913_4224231917212207855_n.jpg"');
     }
 
     public function send_mail($email,$message,$path)

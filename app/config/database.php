@@ -63,7 +63,7 @@ $database['main'] = array(
     'port'		=> '3306',
     'username'	=> 'root',
     'password'	=> '',
-    'database'	=> 'magboo_ariston_jr_act2',
+    'database'	=> 'dilay_act2',
     'charset'	=> 'utf8mb4',
     'dbprefix'	=> '',
 );
