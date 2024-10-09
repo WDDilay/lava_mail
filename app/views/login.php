@@ -36,7 +36,7 @@
       <header>Signup</header>
       <form action="/signup" method="POST">
         <input type="text" name="first_name" placeholder="Enter your First Name" required>
-        <input type="text" name="last_name" placeholder="Enter your First Name" required>
+        <input type="text" name="last_name" placeholder="Enter your Last Name" required>
         <input type="email" name="email" placeholder="Enter your email" required>
         <input type="password" name="password" placeholder="Create a password" required>
         <input type="password" name="con_password" placeholder="Confirm password" required>
